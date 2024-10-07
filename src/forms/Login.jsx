@@ -1,5 +1,5 @@
-import {useEffect, useState} from "react";
-import BankLogo from "./BankLogo.jsx";
+import {useState} from "react";
+import BankLogo from "../essentials/BankLogo.jsx";
 import {useNavigate} from "react-router-dom";
 import axios from "axios";
 

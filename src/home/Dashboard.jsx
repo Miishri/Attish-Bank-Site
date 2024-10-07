@@ -1,7 +1,8 @@
 import {useEffect, useState} from "react";
 import axios from "axios";
-import BankUser from "./BankUser.jsx";
+import BankUser from "../essentials/BankUser.jsx";
 import {useNavigate} from "react-router-dom";
+import Search from "../forms/Search.jsx";
 
 
 export default function Dashboard() {
@@ -61,6 +62,7 @@ export default function Dashboard() {
                 </button>
             </div>
             <BankUser bankUser={currentUser} setCurrentUser={setCurrentUser}/>
+            <Search />
         </div>
     )
 }

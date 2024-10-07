@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import BankLogo from "./BankLogo.jsx";
+import BankLogo from "../essentials/BankLogo.jsx";
 import {useNavigate} from "react-router-dom";
 import axios from "axios";
 
@@ -35,6 +35,7 @@ export default function Register() {
             .post("http://localhost:8080/register", bankUser)
             .then((r) => {
                 alert("ACCOUNT REGISTERED")
+                navigate("/login")
             })
             .catch((error) => {
                 console.error(error);
@@ -97,7 +98,7 @@ export default function Register() {
                             name="lastName"
                             required
                             value={bankUser.lastName}
-                            placeholder={"lastname"}
+                            placeholder={"last name"}
                             onChange={handleChange}
                         />
                     </div>
@@ -108,6 +109,8 @@ export default function Register() {
                             required
                             value={bankUser.birthdate}
                             onChange={handleChange}
+                            onKeyDown={(e) => e.preventDefault()}
+                            max={new Date(new Date().setFullYear(new Date().getFullYear() - 18)).toISOString().split('T')[0]}
                         />
                     </div>
 

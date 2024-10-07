@@ -1,4 +1,4 @@
-import BankLogo from "./BankLogo.jsx";
+import BankLogo from "../essentials/BankLogo.jsx";
 import {useNavigate} from "react-router-dom";
 
 

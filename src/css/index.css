@@ -285,3 +285,28 @@ a {
   background-color: rgba(54, 169, 174, 0.5);
 }
 
+.compact-user-table {
+  width: 50%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 16px;
+  text-align: left;
+}
+
+.compact-user-table th, .compact-user-table td {
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+}
+
+.compact-user-table th {
+  background-color: var(--secondary);
+  font-weight: bold;
+}
+
+.compact-user-table tr:nth-child(even) {
+  background-color: var(--secondary);
+}
+
+.compact-user-table tr:hover {
+  background-color: var(--secondary);
+}
